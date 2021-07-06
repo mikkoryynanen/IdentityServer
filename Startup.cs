@@ -37,7 +37,7 @@ namespace IdentityServer
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(key)),
                     ValidateIssuer = false,
                     ValidateAudience = false
-            };
+                };
             });
 
             services.AddSingleton<IJwtAuthenticationManager>(new JwtAuthenticationManager(key));
